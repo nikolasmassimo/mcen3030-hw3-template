@@ -7,13 +7,13 @@ By Nikolas Mehan
 
 #### Function(s)
 
-1. **```fit_linear(Z, y)```**
+**```fit_linear(Z, y)```**
 
 The purpose of the ```fit_linear``` function is to produce a predictive model that best fits the trend of a given dataset, while returning meaningful information comparing the model to the data.
 
 #### Inputs (parameters)
 
-1. ```Z, y```
+```Z, y```
 
 * The script initializes a matrix ```Z``` using the form ```Z = [ones(size(x,1),1), x]```, which sets the value of the first column in each row to ```1``` determined by the length of the dataset. The second column is filled with the corresponding ```x``` value from the dataset.
 
@@ -31,7 +31,7 @@ $$
 
 #### Returns
 
-1. ```A, Y, E, R2```
+```A, Y, E, R2```
 
 * The coefficient vector ```A``` is the returned set of coefficients for the fitted model.
 * The predicted (theoretical) model values are returned in the vector ```Y``` which is the same size as ```y``` (a.k.a. the data outputs).
@@ -58,7 +58,7 @@ The purpose of the ```partial_function``` function is to compute the partial der
 
 ##### ```fit_nonlinear(x, y, model, seed)```
 
-1. ```x, y, model, seed```
+```x, y, model, seed```
 
 * The values of shear rate (inputs) from the dataset are given as a column vector, ```x```.
 * The shear stress (outputs) from the dataset is given as the column vector, ```y```.
@@ -67,7 +67,7 @@ The purpose of the ```partial_function``` function is to compute the partial der
 
 ##### ```partial_function(model, x, A, i, y0)```
 
-1. ```model, x, A, i, y0```
+```model, x, A, i, y0```
 
 * The same model function handle ```model```.
 * The same column vector ```x```.
@@ -79,13 +79,13 @@ The purpose of the ```partial_function``` function is to compute the partial der
 
 ##### ```fit_nonlinear(x, y, model, seed)```
 
-1. ```A```
+```A```
 
 * The coefficient vector ```A``` is the returned set of coefficients for the given model. The size of ```A``` depends on the size of the ```seed```, or, rather, the number of coefficients given by ```model```.
 
 ##### ```partial_function(model, x, A, i, y0)```
 
-1. ```partial```
+```partial```
 
 * The number ```partial```  that is returned after computing the partial derivative of the model output with respect to the *i-th* model coefficient.
 
